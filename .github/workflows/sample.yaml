@@ -1,7 +1,7 @@
 run-name: ${{github.actor is testing out github actions}}
 on: [push]
 jobs:
-  explore-github-actions
+  explore-github-actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "the job will be automtically trgiggered by ${{github.event_name}}"
