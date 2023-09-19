@@ -1,0 +1,15 @@
+run-name: ${{github.actor is testing out github actions}}
+on: [push]
+jobs:
+  explore-github-actions
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "the job will be automtically trgiggered by ${{github.event_name}}"
+      - run: echo "this job is running on a ${{runner.os}} hosted on github"
+      - name: checkout repository code
+        uses: actions/checkout@v4
+      - run: echo "the ${{github.repository}} repository had been cloned to the runner"
+      - name: list files inthe repo
+        run:
+            ls ${{github.workspace}}
+      - run: echo "this job status is ${{job.status}}"
