@@ -1,4 +1,4 @@
-run-name: ${{github.actor is testing out github actions}}
+run-name: ${{github.actor}} is testing out github actions
 on: [push]
 jobs:
   explore-github-actions:
